@@ -1,0 +1,44 @@
+body {
+    max-height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75em;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+#calculator {
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-direction: column;
+    border: medium solid lightskyblue;
+
+}
+
+#calcDisplay {
+    display: flex;
+    width: 500px;
+    margin: 5px;
+}
+
+.col {
+    align-items: center;
+    width: auto;
+    padding: 5px;
+}
+
+.btn {
+    padding: 10px 50px;
+}
+
+/* figure {
+    text-align: center;
+}  */
