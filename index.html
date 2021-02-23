@@ -33,7 +33,7 @@
 
                     <div class="container">
                         <div>
-                            <input type="text" id="calcDisplay">
+                            <input type="text" id="calcDisplay" readonly>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -46,7 +46,7 @@
                                 <button class="btn btn-secondary numberDigits">9</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-warning">/</button>
+                                <button class="btn btn-warning" id="oper-divide">/</button>
                             </div>
 
                         </div>
@@ -61,7 +61,7 @@
                                 <button class="btn btn-secondary numberDigits">6</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-warning">*</button>
+                                <button class="btn btn-warning" id="oper-multiply">*</button>
                             </div>
                         </div>
                         <div class="row">
@@ -75,7 +75,7 @@
                                 <button class="btn btn-secondary numberDigits">3</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-warning">-</button>
+                                <button class="btn btn-warning" id="oper-minus">-</button>
                             </div>
                         </div>
                         <div class="row">
@@ -86,10 +86,10 @@
                                 <button class="btn btn-secondary numberDigits">.</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-success">=</button>
+                                <button class="btn btn-success" id="oper-equals">=</button>
                             </div>
                             <div class="col">
-                                <button class="btn btn-warning">+</button>
+                                <button class="btn btn-warning" id="oper-plus">+</button>
                             </div>
                         </div>
 
@@ -103,7 +103,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         </script>
-        <script src="app.css"></script>
+        <script src="app.js"></script>
     </body>
 
 </html>
