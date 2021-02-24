@@ -1,21 +1,30 @@
-// TODO: number display in the beginning
-// TODO: create variable to display numbers when pressed
-// TODO: create variable to store numbers 
-// TODO: operators won't be displayed, but need to action
-
 const numbersBtns = document.querySelectorAll('.numberDigits');
-const numbers = numbersBtns.value;
-const operatorBtns = document.querySelectorAll('.btn-warning');
-const equalBtns = document.querySelectorAll('.btn-success');
+const allButtons = document.querySelectorAll('.btn');
 
 let calcDisplay = document.querySelector('#calcDisplay')
-calcDisplay.innerHTML = 0;
+let calcDisplayValue = document.querySelector('#calcDisplay').value
+// calcDisplay = 0;
 
 let numberArray = []; //store clicked number --- use an array?
 let initialNumber = 0;
 
-for (let i = 0; i < numbersBtns.length; i++) {
-    numbersBtns[i].addEventListener('click', (e) => {
-        calcDisplay.innerHTML += e.target.innerHTML;
+for (let button of allButtons) { //clicking on number buttons results in adding to calcdisplay
+    button.addEventListener('click', () => {
+        // console.dir(btns);
+        calcDisplayValue += button.innerHTML
+        console.log(button.innerHTML)
+
     })
+}
+
+function calculate(event) {
+    const clickedButtonValue = event.target.value;
+
+    if (clickedButtonValue === '=') {
+        if (calcDisplayValue !== '') {
+
+        }
+    }
+
+
 }
