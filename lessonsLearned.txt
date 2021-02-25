@@ -1,0 +1,25 @@
+Todos:
+
+
+Syntax Lessons Learned:
+***HTML***
+1. Always declare a button type (button, reset, or submit).
+2. Using value as an attribute will define a default value which will be displayed in the element on page load.
+
+
+
+
+
+Lessons Learned:
+
+1. Start Small
+
+
+How to get out of Tutorial Hell:
+1. Don't just follow the tutorials/projects. Deconstruct it.
+---> Add my own personal touches. 
+2. Look at other people's codes on Github and other places. (Look as in Google the methods that you don't know, look up terms that you don't know)
+3. Contribute to open source.
+4. Know when to skip/take it easy. As in when watching Tutorial video you don't have to watch the entire series or the whole video. 
+5. Learn Algorithms and Data Structure(Watch the video for the reasons behind)
+6. Join a community (real life or online) Go to a meetup. Hang out. Talk about programming. Do stuff.
