@@ -7,8 +7,13 @@ Syntax Lessons Learned:
 2. Using value as an attribute will define a default value which will be displayed in the element on page load.
 
 
+***CSS***
+1. Look into psuedoclasses
+2. You can also declare variables to make it easier to recall a combination of settings.
 
-
+***JS***
+1. Objects can have key value pairs (use commas!)
+2. In the beginning, you can use an object to state the 'starting' values of what you might be dealing with later on. 
 
 Lessons Learned:
 
