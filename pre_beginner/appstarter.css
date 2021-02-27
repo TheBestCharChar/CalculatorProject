@@ -27,6 +27,7 @@ body {
     height: 400px;
 }
 
+
 .calculator-screen {
     width: 100%;
     color: white;
@@ -46,7 +47,7 @@ body {
     font-size: 22px;
     width: 65px;
     margin-block-end: 5px;
-    ;
+    cursor: pointer;
 }
 
 button:hover {
