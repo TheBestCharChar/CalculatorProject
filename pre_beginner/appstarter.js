@@ -18,40 +18,71 @@ const rightParen = document.querySelector('#rightParen');
 const leftParen = document.querySelector('#leftParen');
 const percentBtn = document.querySelector('#percentageSign');
 
-function updateDisplay() {
+function updateDisplay() { //making so that the DOM selecting calcDisplay will be equal to the object calculator's displayValue.
     calcDisplay.value = calculator.displayValue;
 }
-updateDisplay();
+updateDisplay(); //we want to call it so that it's 'there'.
 
+//* this is to check the button and check if specific buttons contain a certain class.
 const keys = document.querySelector('.calculator-keys');
-
-// for (let key of keys) {
-//     key.addEventListener('click', (e) => {
-//         console.dir(e);
-//     })
-// }
-
 keys.addEventListener('click', (event) => {
-    const {
-        target
-    } = event; //desctructuring the event object and looking for the target property of the click event 
-    if (!target.matches('button')) {
+    const { target } = event; //desctructuring the event object and looking for the target property of the click event 
+
+    if (!target.matches('button')) { // this is checking if it's a button that was clicked
         return;
-    }
-    if (target.classList.contains('operatorButtons')) {
+    } else if (target.classList.contains('operatorButtons')) {
         console.log('operatorButtons', target.value);
         return;
-    }
-    if (target.classList.contains('decimal')) {
-        console.log('decimal', target.value);
+    } else if (target.classList.contains('decimal')) {
+        inputDecimal(target.value);
+        updateDisplay()
         return;
-    }
-    if (target.classList.contains('clear')) {
-        console.log('clear', target.value);
+    } else if (target.classList.contains('equals')) {
+        console.log('equals', target.value);
         return;
-    }
-    console.log('button', target.value)
-
+    } else if (target.classList.contains('percentageSign')) {
+        console.log('percentage', target.value);
+        return;
+    } else if (target.classList.contains('rightParen')) {
+        // console.log('rightParenthesis', target.value);
+        inputRightParenthesis(target.value);
+        updateDisplay();
+        return;
+    } else if (target.classList.contains('leftParen')) {
+        // console.log('leftParenthesis', target.value);
+        inputLeftParenthesis(target.value);
+        updateDisplay();
+        return;
+    } else if (target.classList.contains('clear')) {
+        console.log('clear', target.value)
+        return;
+    } else
+        // console.log('digit',target.value)
+        inputDigit(target.value);
+    updateDisplay();
 })
 
-//second try
+//* overwrite calculator (object) displayValue  if the current value is 0 with digit. Otherwise append via concatenate
+function inputDigit(digit) {
+    const { displayValue } = calculator;
+    calculator.displayValue = displayValue === '0' ? digit : displayValue + digit; //ternary operator 
+}
+
+//* function that concatenates decimal point to calculator.displayValue if there is not already a decimal in the displayValue.
+function inputDecimal(dot) {
+    if (!calculator.displayValue.includes(dot)) {
+        calculator.displayValue += dot;
+    }
+}
+
+function inputLeftParenthesis(leftSide) {
+    const { displayValue } = calculator;
+    calculator.displayValue = displayValue === '0' ? leftSide :
+        displayValue + leftSide;
+}
+
+function inputRightParenthesis(rightSide) {
+    const { displayValue } = calculator;
+    calculator.displayValue = displayValue === '0' ? rightSide :
+        displayValue + rightSide;
+}

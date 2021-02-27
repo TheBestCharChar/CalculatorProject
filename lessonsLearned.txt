@@ -15,6 +15,19 @@ Syntax Lessons Learned:
 1. Objects can have key value pairs (use commas!)
 2. In the beginning, you can use an object to state the 'starting' values of what you might be dealing with later on. 
 
+*Destructuring* https://www.youtube.com/watch?v=NIq3qLaHCIs&ab_channel=WebDevSimplified
+-ES6 that makes reading and writing code a lot easier
+-array/object on the right side of the equal plusSign
+-can be used to combine arrays and Objects
+-can be used on functions 
+
+*Ternary Operator* 
+- only JS operator that takes 3 operands
+- condition followed by ?, then an expression to execute if the condition is truthy followed by a : , and finally the express to execute if the conditon is falsy. 
+- used frequently in replace as shortcut for an if statement.
+
+
+
 Lessons Learned:
 
 1. Start Small
