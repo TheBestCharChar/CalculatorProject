@@ -14,6 +14,8 @@ Syntax Lessons Learned:
 ***JS***
 1. Objects can have key value pairs (use commas!)
 2. In the beginning, you can use an object to state the 'starting' values of what you might be dealing with later on. 
+3. When writing functions, don't try to accomplish everything in one Go
+
 
 *Destructuring* https://www.youtube.com/watch?v=NIq3qLaHCIs&ab_channel=WebDevSimplified
 -ES6 that makes reading and writing code a lot easier
@@ -26,11 +28,12 @@ Syntax Lessons Learned:
 - condition followed by ?, then an expression to execute if the condition is truthy followed by a : , and finally the express to execute if the conditon is falsy. 
 - used frequently in replace as shortcut for an if statement.
 
+*Switch vs if/else*
+- if-else statements checks for equality as well as a logical expression. 
+- switch statements checks only for equality. 
+- switch statements evaluates only character or an integer datatype. 
 
 
-Lessons Learned:
-
-1. Start Small
 
 
 How to get out of Tutorial Hell:
