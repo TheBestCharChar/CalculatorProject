@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator Project</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link rel="stylesheet" href="app.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+
+            <div class="card" id="calculator">
+                <div class="container" id="titleQuote">
+                    <h1 class="calculatorTitle">JS Calculator</h1>
+                    <p>
+                        <figure>
+                            <blockquote class="blockquote">
+                                <p>"Everybody should learn to program a computer, because it teaches you how to think."
+                                </p>
+                            </blockquote>
+                            <figcaption class="blockquote-footer">
+                                <p>Steve Jobs</p>
+                            </figcaption>
+                        </figure>
+                    </p>
+                </div>
+                <div class="card-body">
+
+                    <div class="container">
+                        <div id="previous-operand">
+                            123 +
+                        </div>
+                        <div id="calcDisplay" class="display">
+                            456
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">7</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">8</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">9</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-warning" id="oper-divide">/</button>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">4</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">5</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">6</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-warning" id="oper-multiply">*</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">1</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">2</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">3</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-warning" id="oper-minus">-</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">0</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary numberDigits">.</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-success" id="oper-equals">=</button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-warning" id="oper-plus">+</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+        <script src="app.js"></script>
+    </body>
+
+</html>

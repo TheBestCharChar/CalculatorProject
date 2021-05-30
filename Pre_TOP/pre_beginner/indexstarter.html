@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator CodeAlong</title>
+    <link rel="stylesheet" href="appstarter.css">
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <!-- <h1>Calculator CodeAlong</h1> -->
+        <!-- <div class="history-display"></div> -->
+        <!-- <hr> -->
+
+        <input type="text" class="calculator-screen" id="calcDisplay" value="0" disabled>
+
+
+        <div class="calculator-keys container">
+            <!-- top row of buttons -->
+            <button type="button" class="button leftParen" id="rightParen" value="(">(</button>
+            <button type="button" class="button rightParen" id="leftParen" value=")">)</button>
+            <button type="button" class="button operatorButtons percentageSign" id="percentageSign" value="%">%</button>
+            <button type="button" class="button clear" id="clear" value="AC">AC</button>
+
+            <!--2nd row  -->
+            <button type="button" class="button numberButtons" value="7">7</button>
+            <button type="button" class="button numberButtons" value="8">8</button>
+            <button type="button" class="button numberButtons" value="9">9</button>
+            <button type="button" class="button operatorButtons" id="divideSign" value="/">/</button>
+
+            <!-- 3rd row -->
+            <button type="button" class="button numberButtons" value="4">4</button>
+            <button type="button" class="button numberButtons" value="5">5</button>
+            <button type="button" class="button numberButtons" value="6">6</button>
+            <button type="button" class="button operatorButtons" id="multiplySign" value="*">*</button>
+
+            <!-- 4th row-->
+            <button type="button" class="button numberButtons" value="1">1</button>
+            <button type="button" class="button numberButtons" value="2">2</button>
+            <button type="button" class="button numberButtons" value="3">3</button>
+            <button type="button" class="button operatorButtons" id="minusSign" value="-">-</button>
+
+            <!-- 5th row -->
+            <button type="button" class="button numberButtons" value="0">0</button>
+            <button type="button" class="button decimal" id="decimal" value=".">.</button>
+            <button type="button" class="button operatorButtons equals" id="equalSign" value="=">=</button>
+            <button type="button" class="button operatorButtons" id="plusSign" value="+">+</button>
+        </div>
+
+    </div>
+
+
+    </div>
+    <script src="appstarter.js"></script>
+</body>
+
+</html>
