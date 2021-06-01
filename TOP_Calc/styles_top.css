@@ -142,7 +142,7 @@ h1 {
 .calculator {
     background-color: black;
     color: white;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 80vh;
     width: 50vh;
     margin: 0 auto;
@@ -151,23 +151,49 @@ h1 {
 
 .calcdisplay {
     text-align: right;
-    margin: 35px;
+    padding: 10px;
     background-color: rgb(92, 92, 92);
+    height: 20%;
+    border-right: 1rem solid black;
+    border-top: 1rem solid black;
+    border-left: 1rem solid black;
+
 
 }
 
 .buttonsGroup {
     display: flex;
     flex-wrap: wrap;
+    height: 75%;
+    justify-content: center;
 }
 
 buttons {
-    border: 1px solid white;
+    border: 2px solid white;
     padding: .5em;
     margin: .5em;
     flex-wrap: wrap;
-    min-width: 40px;
-    text-align: center;
+    width: 2em;
+    height: 2em;
+    font-size: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.bigZeroBtn {}
+.operatorBtns {
+    background-color: rgb(231, 163, 36);
+}
+
+.bigZeroBtn {
+    width: 6em;
+    border-radius: 45%;
+    justify-content: left;
+}
+
+.miscCalcBtns {
+    background-color: grey;
+    color: black;
+}
