@@ -81,7 +81,7 @@ function inputDigit(digit) {
 
 //* function that concatenates decimal point to calculator.displayValue if there is not already a decimal in the displayValue.
 function inputDecimal(dot) {
-    if (calculator.waitingForSecondOperand === true) {
+    if (calculator.waitingForSecondOperand === true) { //getting rid of the decimal bug
         calculator.displayValue = '0.';
         calculator.waitingForSecondOperand = false;
         return
