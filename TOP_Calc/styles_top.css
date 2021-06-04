@@ -143,43 +143,49 @@ h1 {
     background-color: black;
     color: white;
     /* border: 1px solid red; */
-    height: 80vh;
-    width: 50vh;
+    height: 70vh;
+    width: 45vh;
     margin: 0 auto;
-    border-radius: 5px;
+    border-radius: 5%;
+    padding: 15px;
 }
 
 .calcdisplay {
-    text-align: right;
-    padding: 10px;
-    background-color: rgb(92, 92, 92);
+    /* padding: 10px; */
+    /* background-color: rgb(92, 92, 92); */
     height: 20%;
     border-right: 1rem solid black;
     border-top: 1rem solid black;
     border-left: 1rem solid black;
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 4em;
+    padding-right: 20px;
+    /* border-radius: 5%; */
 
 }
 
 .buttonsGroup {
     display: flex;
     flex-wrap: wrap;
-    height: 75%;
+    height: 70%;
     justify-content: center;
 }
 
 buttons {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     padding: .5em;
-    margin: .5em;
+    margin: .4em;
     flex-wrap: wrap;
-    width: 2em;
-    height: 2em;
+    width: 2.2em;
+    height: 2.2em;
     font-size: 1.5em;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(49, 49, 49);
 
 }
 
