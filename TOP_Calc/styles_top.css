@@ -143,7 +143,7 @@ h1 {
     background-color: black;
     color: white;
     /* border: 1px solid red; */
-    height: 70vh;
+    height: 600px;
     /* width: 55vw; */
     margin: 0 auto;
     border-radius: 5%;
@@ -151,7 +151,7 @@ h1 {
     width: 400px;
 }
 
-.calcdisplay {
+.calcDisplay {
     height: 20%;
     border-right: 1rem solid black;
     border-top: 1rem solid black;
