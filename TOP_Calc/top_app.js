@@ -24,8 +24,18 @@ let displayValue = document.querySelector('.calcDisplay');
 //*pseudocode
 //? First Number Display
 //  Button Click on Number
+const numButtons = document.querySelectorAll('.numBtns');
+for (const numButton of numButtons) {
+    numButton.addEventListener('click', (e) => {
+        displayValue.innerText += e.target.innerText;
+        displayValue.innerText = parseInt(displayValue.innerText)
+    })
+}
 //  Number appears in calculator display 
-const numClick = document.querySelectorAll('.numBtns');
+
+//? Multiple numbers append to each other before Operator Click
+//  after append, turn the string to a number to rid the 0 before?
+
 
 //? Operator click
 // Store displayed value as first value
