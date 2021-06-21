@@ -25,6 +25,7 @@ let displayValue = document.querySelector('.calcDisplay');
 //? First Number Display
 //  Button Click on Number
 //  Number appears in calculator display 
+const numClick = document.querySelectorAll('.numBtns');
 
 //? Operator click
 // Store displayed value as first value
