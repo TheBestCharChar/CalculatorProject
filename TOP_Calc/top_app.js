@@ -50,3 +50,13 @@ for (const numButton of numButtons) {
 //  call function operate on stored first values and second values with the stored operator value
 // 
 // 
+
+//? clear calculator
+// when clicking button 'AC':
+const clearCalc = document.querySelector('#clearCalcBtn');
+//  clear display Value
+clearCalc.addEventListener('click', (e) => {
+    displayValue.innerText = 0;
+
+})
+//  clear operator value
