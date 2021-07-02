@@ -21,6 +21,8 @@ function operate(num1, num2, operator) {
 
 let displayValue = document.querySelector('.calcDisplay');
 let operatorValue = "";
+let firstNumber = 0;
+
 //*pseudocode
 //? First Number Display
 //  Button Click on Number
@@ -32,7 +34,7 @@ for (const numButton of numButtons) {
     })
 }
 //  Number appears in calculator display 
-
+//  setup switch to differentiate between first operand number and second operand nunber
 //? Multiple numbers append to each other before Operator Click
 //  after append, turn the string to a number to rid the 0 before?
 
@@ -41,12 +43,13 @@ for (const numButton of numButtons) {
 const operatorBtns = document.querySelectorAll('.operatorBtns');
 for (operatorBtn of operatorBtns) {
     operatorBtn.addEventListener('click', (e) => {
+        // operator button clicked should be stored as the operator value 
         operatorValue = e.target.innerText;
-        console.log(operatorValue);
+        // Store displayed value as first value
+        firstNumber = displayValue.innerText;
+        console.log(firstNumber);
     })
 }
-// Store displayed value as first value
-// operator button clicked should be stored as the operator value 
 //  which will be used in operate function
 
 //? 2nd number Display
