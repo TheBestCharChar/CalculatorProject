@@ -20,7 +20,7 @@ function operate(num1, num2, operator) {
 
 
 let displayValue = document.querySelector('.calcDisplay');
-
+let operatorValue = "";
 //*pseudocode
 //? First Number Display
 //  Button Click on Number
@@ -38,6 +38,13 @@ for (const numButton of numButtons) {
 
 
 //? Operator click
+const operatorBtns = document.querySelectorAll('.operatorBtns');
+for (operatorBtn of operatorBtns) {
+    operatorBtn.addEventListener('click', (e) => {
+        operatorValue = e.target.innerText;
+        console.log(operatorValue);
+    })
+}
 // Store displayed value as first value
 // operator button clicked should be stored as the operator value 
 //  which will be used in operate function
