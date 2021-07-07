@@ -22,6 +22,7 @@ function operate(num1, num2, operator) {
 let displayValue = document.querySelector('.calcDisplay');
 let operatorValue = "";
 let firstNumber = 0;
+let secondNumber = 0;
 
 //? Distinguish between first and second operand
 let isSecondOperand = false;
@@ -32,15 +33,17 @@ let isSecondOperand = false;
 const numButtons = document.querySelectorAll('.numBtns');
 for (const numButton of numButtons) {
     numButton.addEventListener('click', (e) => {
+        // if (isSecondOperand = false) {
         displayValue.innerText += e.target.innerText;
         displayValue.innerText = parseInt(displayValue.innerText)
+        // }
+        //  else if (isSecondOperand = true) {
+        //     displayValue.innerText = 0;
+        //     displayValue.innerText += e.target.innerText;
+        //     displayValue.innerText = parseInt(displayValue.innerText);
+        // }
     })
 }
-//  Number appears in calculator display 
-//  setup switch to differentiate between first operand number and second operand nunber
-//? Multiple numbers append to each other before Operator Click
-//  after append, turn the string to a number to rid the 0 before?
-
 
 //? Operator click
 
@@ -50,27 +53,21 @@ for (operatorBtn of operatorBtns) {
         // operator button clicked should be stored as the operator value 
         switch (operatorValue = e.target.innerText) {
             case "/":
-                operatorValue = "divideNum"
+                operatorValue = divideNum;
                 break;
             case "*":
-                operatorValue = "multiplyNum"
+                operatorValue = multiplyNum;
                 break;
             case "-":
-                operatorValue = "subtractNum"
+                operatorValue = subtractNum;
                 break;
             case "+":
-                operatorValue = "addNum"
+                operatorValue = addNum;
                 break;
         }
-        // Store displayed value as first value
-        firstNumber = displayValue.innerText;
-        //when user clicks on operator, this acts as toggle for second operand
-        if (isSecondOperand) {
-            isSecondOperand = false;
-        } else {
-            isSecondOperand = true;
-        }
-        // console.log(isSecondOperand);
+        // Store displayed value as first value if isSecondOperand
+        firstNumber = parseInt(displayValue.innerText);
+
     })
 }
 
@@ -84,7 +81,8 @@ for (operatorBtn of operatorBtns) {
 //  call function operate on stored first values and second values with the stored operator value
 const equalsBtn = document.querySelector('#equalBtn');
 equalsBtn.addEventListener('click', (e) => {
-    console.log(e);
+    displayValue.innerText = operate(firstNumber, secondNumber, operatorValue);
+    // console.log(e);
 })
 // 
 // 
@@ -99,4 +97,5 @@ clearCalc.addEventListener('click', (e) => {
     firstNumber = 0;
     //  clear operator value
     operatorValue = "";
+    secondNumber = 0;
 })
