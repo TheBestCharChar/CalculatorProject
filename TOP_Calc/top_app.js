@@ -23,6 +23,9 @@ let displayValue = document.querySelector('.calcDisplay');
 let operatorValue = "";
 let firstNumber = 0;
 
+//? Distinguish between first and second operand
+let isSecondOperand = false;
+
 //*pseudocode
 //? First Number Display
 //  Button Click on Number
@@ -40,19 +43,40 @@ for (const numButton of numButtons) {
 
 
 //? Operator click
+
 const operatorBtns = document.querySelectorAll('.operatorBtns');
 for (operatorBtn of operatorBtns) {
     operatorBtn.addEventListener('click', (e) => {
         // operator button clicked should be stored as the operator value 
-        operatorValue = e.target.innerText;
+        switch (operatorValue = e.target.innerText) {
+            case "/":
+                operatorValue = "divideNum"
+                break;
+            case "*":
+                operatorValue = "multiplyNum"
+                break;
+            case "-":
+                operatorValue = "subtractNum"
+                break;
+            case "+":
+                operatorValue = "addNum"
+                break;
+        }
         // Store displayed value as first value
         firstNumber = displayValue.innerText;
-        console.log(firstNumber);
+        //when user clicks on operator, this acts as toggle for second operand
+        if (isSecondOperand) {
+            isSecondOperand = false;
+        } else {
+            isSecondOperand = true;
+        }
+        // console.log(isSecondOperand);
     })
 }
-//  which will be used in operate function
+
 
 //? 2nd number Display
+
 //  Clear display value 
 //  number(s) clicked should appear in calc display
 //
@@ -67,6 +91,6 @@ const clearCalc = document.querySelector('#clearCalcBtn');
 //  clear display Value
 clearCalc.addEventListener('click', (e) => {
     displayValue.innerText = 0;
-
+    //  clear operator value
+    operatorValue = "";
 })
-//  clear operator value
