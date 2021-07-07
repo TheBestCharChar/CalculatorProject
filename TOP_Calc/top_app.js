@@ -82,6 +82,10 @@ for (operatorBtn of operatorBtns) {
 //
 //? equal sign
 //  call function operate on stored first values and second values with the stored operator value
+const equalsBtn = document.querySelector('#equalBtn');
+equalsBtn.addEventListener('click', (e) => {
+    console.log(e);
+})
 // 
 // 
 
@@ -91,6 +95,8 @@ const clearCalc = document.querySelector('#clearCalcBtn');
 //  clear display Value
 clearCalc.addEventListener('click', (e) => {
     displayValue.innerText = 0;
+    // clear first number value
+    firstNumber = 0;
     //  clear operator value
     operatorValue = "";
 })
