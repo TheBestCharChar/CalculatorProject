@@ -27,9 +27,8 @@ let secondNumber = 0;
 let isSecondOperand = false;
 
 //?  Number Display
-//  Button Click on Number
 const numButtons = document.querySelectorAll('.numBtns');
-if (firstNumber === 0 && isSecondOperand == false) {
+if (isSecondOperand == false) {
     for (const numButton of numButtons) {
         numButton.addEventListener('click', (e) => {
             // console.log(e);
@@ -37,12 +36,22 @@ if (firstNumber === 0 && isSecondOperand == false) {
             displayValue.innerText = parseInt(displayValue.innerText)
         })
     }
-} else if (isSecondOperand = true && secondNumber === 0) {
-    //
-    displayValue.innerText = 0;
-    displayValue.innerText += e.target.innerText;
-    displayValue.innerText = parseInt(displayValue.innerText)
+} else if (isSecondOperand == true) {
+    for (const numButton of numButtons) {
+        numButton.addEventListener('click', (e) => {
 
+            displayValue.innerText += e.target.innerText;
+            displayValue.innerText = parseInt(displayValue.innerText)
+        })
+    }
+} else {
+    for (const numButton of numButtons) {
+        numButton.addEventListener('click', (e) => {
+            // console.log(e);
+            displayValue.innerText += e.target.innerText;
+            displayValue.innerText = parseInt(displayValue.innerText)
+        })
+    }
 }
 
 //? Operator click
