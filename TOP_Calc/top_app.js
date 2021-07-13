@@ -28,31 +28,46 @@ let isSecondOperand = false;
 
 //?  Number Display
 const numButtons = document.querySelectorAll('.numBtns');
-if (isSecondOperand == false) {
-    for (const numButton of numButtons) {
-        numButton.addEventListener('click', (e) => {
-            // console.log(e);
+for (const numButton of numButtons) {
+    numButton.addEventListener('click', (e) => {
+        if (isSecondOperand == false) {
             displayValue.innerText += e.target.innerText;
             displayValue.innerText = parseInt(displayValue.innerText)
-        })
-    }
-} else if (isSecondOperand == true) {
-    for (const numButton of numButtons) {
-        numButton.addEventListener('click', (e) => {
+        } else if (isSecondOperand == true) {
+            displayValue.innerText = 0;
+            displayValue.innerText += e.target.innerText;
+            displayValue.innerText = parseInt(displayValue.innerText)
+        }
 
-            displayValue.innerText += e.target.innerText;
-            displayValue.innerText = parseInt(displayValue.innerText)
-        })
-    }
-} else {
-    for (const numButton of numButtons) {
-        numButton.addEventListener('click', (e) => {
-            // console.log(e);
-            displayValue.innerText += e.target.innerText;
-            displayValue.innerText = parseInt(displayValue.innerText)
-        })
-    }
+        // console.log(`displayValue.innerText=${displayValue.innerText}`);
+        // console.log(`e.target.innerText= ${e.target.innerText}`);
+    })
 }
+// if (isSecondOperand == false) {
+//     for (const numButton of numButtons) {
+//         numButton.addEventListener('click', (e) => {
+//             // console.log(e);
+//             displayValue.innerText += e.target.innerText;
+//             displayValue.innerText = parseInt(displayValue.innerText)
+//         })
+//     }
+// } else if (isSecondOperand == true) {
+//     for (const numButton of numButtons) {
+//         numButton.addEventListener('click', (e) => {
+
+//             displayValue.innerText += e.target.innerText;
+//             displayValue.innerText = parseInt(displayValue.innerText)
+//         })
+//     }
+// } else {
+//     for (const numButton of numButtons) {
+//         numButton.addEventListener('click', (e) => {
+//             // console.log(e);
+//             displayValue.innerText += e.target.innerText;
+//             displayValue.innerText = parseInt(displayValue.innerText)
+//         })
+//     }
+// }
 
 //? Operator click
 const operatorBtns = document.querySelectorAll('.operatorBtns');
@@ -115,4 +130,5 @@ clearCalc.addEventListener('click', (e) => {
     //  clear operator value
     operatorValue = "";
     secondNumber = 0;
+    isSecondOperand = false;
 })
